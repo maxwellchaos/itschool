@@ -1,0 +1,42 @@
+@import "_include";
+
+
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 0px;
+	img {
+		flex-shrink: 0;
+		flex-grow: 0;
+	}
+	h1 {
+		max-width: 600px;
+		line-height: 1.2;
+		margin: 0px 30px;
+	}
+	.contact {
+		align-self: flex-start;
+		flex-shrink: 0;
+		.tel {
+			margin-bottom: 7px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "_adaptive";
+
