@@ -15,15 +15,18 @@ body {
 	font-family: $ffamily-content;
 	line-height: 1.75;
 	background: $color-lighter;
-	width: 80%;
-	max-width: 1920px;
-	margin: auto;
 }
 *, :after, :before {
 	box-sizing: border-box;
 }
+header, section {
+	width: 80%;
+	max-width: 1920px;
+	margin: auto;
+}
 section {
-	padding: 20px 0px;
+	padding-top: 10px;
+	padding-bottom: 15px;
 }
 h1 {
 	font-family: $ffamily-content;

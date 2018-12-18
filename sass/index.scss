@@ -1,5 +1,6 @@
 
 @import "_include";
+@import "_header-menu";
 
 ///////////////////////////////////////////////////////////////
 // header
@@ -24,33 +25,6 @@ header {
 		flex-shrink: 0;
 		.tel {
 			margin-bottom: 7px;
-		}
-	}
-}
-
-///////////////////////////////////////////////////////////////
-// menu
-///////////////////////////////////////////////////////////////
-.header-menu {
-	position: sticky;
-	z-index: 10;
-	top: 0;
-	ul {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		background: $color-light;
-		li {
-			margin: 10px 15px;
-			border-bottom: 2px solid transparent;
-			&:hover > a {
-				color: $color-accent;
-			}
-		}
-		a {
-			transition: 0.4s;
 		}
 	}
 }

@@ -1,3 +1,74 @@
+.header-menu-container {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  background: #f4f4f4;
+  min-height: 63px; }
+
+.header-menu {
+  margin-left: auto; }
+  .header-menu ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none; }
+  .header-menu a {
+    display: flex;
+    align-items: center;
+    height: 63px;
+    padding: 0 25px;
+    transition: 0.4s;
+    color: inherit;
+    font-family: Arimo-Regular;
+    user-select: none;
+    justify-content: center; }
+    .header-menu a:hover, .header-menu a.active {
+      opacity: 0.4; }
+
+.header-menu-touch {
+  width: 58px;
+  height: 63px;
+  display: none;
+  align-content: space-between;
+  flex-wrap: wrap;
+  cursor: pointer;
+  padding: 15px 5px;
+  position: absolute;
+  top: 1px;
+  right: 15px; }
+
+.header-menu-touch span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: grey;
+  opacity: 0.7;
+  border-radius: 10px;
+  transition: 0.4s; }
+
+.open.header-menu-touch > span:nth-child(1) {
+  transform: translateY(14.5px) rotate(-45deg); }
+
+.open.header-menu-touch > span:nth-child(3) {
+  transform: translateY(-14.5px) rotate(45deg); }
+
+.open.header-menu-touch > span:nth-child(2) {
+  opacity: 0; }
+
+@media screen and (max-width: 1080px) {
+  .header-menu-touch {
+    display: flex; }
+  .header-menu {
+    display: none;
+    width: 100%; }
+  .header-menu ul {
+    flex-direction: column;
+    margin: 0; }
+  .header-menu a {
+    transition-property: color; } }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -15,25 +86,6 @@ header {
     flex-shrink: 0; }
     header .contact .tel {
       margin-bottom: 7px; }
-
-.header-menu {
-  position: sticky;
-  z-index: 10;
-  top: 0; }
-  .header-menu ul {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background: #f4f4f4; }
-    .header-menu ul li {
-      margin: 10px 15px;
-      border-bottom: 2px solid transparent; }
-      .header-menu ul li:hover > a {
-        color: #209c89; }
-    .header-menu ul a {
-      transition: 0.4s; }
 
 .courses-container {
   display: flex;
