@@ -23,14 +23,13 @@ body {
 *, :after, :before {
 	box-sizing: border-box;
 }
-header, section {
+header, section, h2 {
 	width: 80%;
 	max-width: 1920px;
 	margin: auto;
 }
 section {
-	padding-top: 10px;
-	padding-bottom: 15px;
+	//
 }
 h1 {
 	font-family: $ffamily-content;
@@ -41,6 +40,8 @@ h2 {
 	font-family: $ffamily-content;
 	font-size: $fsize-h2;
 	font-weight: normal;
+	padding-top: 70px;
+	padding-bottom: 10px;
 }
 a {
 	text-decoration: none;

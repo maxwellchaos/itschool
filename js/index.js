@@ -2,10 +2,11 @@
 const store = new Vuex.Store({
 	state: {
 		storeMenu: [
-			{link:'courses.html', name:'Программирование на C#'},
-			{link:'courses.html', name:'Web-разработка'},
-			{link:'courses.html', name:'Фотошоп'},
-			{link:'courses.html', name:'3D моделирование'}
+			{link:'#courses-scroll', name:'Курсы'},
+			{link:'#teachers-scroll', name:'Преподаватели'},
+			{link:'#steps-scroll', name:'Обучение'},
+			{link:'#map-scroll', name:'Контакты'},
+			{link:'#reviews-scroll', name:'Отзывы'}
 		],
 		storeCourses: [
 			{color:'orange', img:'_tmpimg/courses.jpg', text:'Программирование на C# для ребят от 11 до 17 лет',       btn1:'', btn2:''},
@@ -44,35 +45,44 @@ const store = new Vuex.Store({
 
 
 var appMenu = new Vue({
-	el: '#vue-menu',
+	el: '#menu',
 	store,
 	computed: {
 		storeMenu() { return store.state.storeMenu; }
+	},
+	methods: {
+		clickMenu() {
+			if($('.header-menu-touch').is(':visible')) {
+				var headerMenu = '.header-menu';
+				$(headerMenu).slideToggle();
+				$(headerMenu+'-touch').toggleClass('open');	
+			} 
+		}
 	}
 });
 var appCourses = new Vue({
-	el: '#vue-courses',
+	el: '#courses',
 	store,
 	computed: {
 		storeCourses() { return store.state.storeCourses; }
 	}
 });
 var appTeachers = new Vue({
-	el: '#vue-teachers',
+	el: '#teachers',
 	store,
 	computed: {
 		storeTeachers() { return store.state.storeTeachers; }
 	}
 });
 var appSteps = new Vue({
-	el: '#vue-steps',
+	el: '#steps',
 	store,
 	computed: {
 		storeSteps() { return store.state.storeSteps; }
 	}
 });
 var appReviews = new Vue({
-	el: '#vue-reviews',
+	el: '#reviews',
 	store,
 	computed: {
 		storeReviews() { return store.state.storeReviews; }
@@ -88,6 +98,9 @@ $('.reviews-container').slick({
 		{breakpoint: 1200,  settings:  { slidesToShow: 1, slidesToScroll: 1 }}
 	]
 });
+
+
+
 
 
 var headerMenu = '.header-menu';

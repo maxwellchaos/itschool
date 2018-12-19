@@ -21,7 +21,6 @@
 </head>
 <body>
 
-	
 	<div id="yandex"></div>
 
 	<header>
@@ -38,11 +37,10 @@
 		</div>
 	</header>
 
-
-	<div class="header-menu-container" id="vue-menu">
+	<div class="header-menu-container" id="menu">
 		<nav class="header-menu">
 			<ul>
-				<li v-for="item in storeMenu"><a :href="item.link">{{item.name}}</a></li>
+				<li v-for="item in storeMenu" @click="clickMenu"><a :href="item.link">{{item.name}}</a></li>
 			</ul>
 		</nav>
 		<div class="header-menu-touch">
@@ -51,10 +49,9 @@
 			<span></span>
 		</div>
 	</div>
-
-
-	<section class="courses" id="vue-courses">
-		<h2>Наши курсы</h2>
+	
+	<h2 id="courses-scroll">Наши курсы</h2>
+	<section class="courses" id="courses">
 		<div class="courses-container">
 			<div class="item" v-for="(item, i) in storeCourses">
 				<div class="img" :style="{ backgroundImage: 'url('+item.img +')' }"></div>
@@ -66,10 +63,9 @@
 			</div>
 		</div>
 	</section>
-
-
-	<section class="teachers" id="vue-teachers">
-		<h2>Преподаватели</h2>
+	
+	<h2 id="teachers-scroll">Преподаватели</h2>
+	<section class="teachers" id="teachers">
 		<div class="teachers-container">
 			<div class="item" v-for="item in storeTeachers">
         		<div class="name">{{item.name}}</div>
@@ -82,10 +78,9 @@
 			<button class="btn-standart">Жмите сюда, чтобы записаться на пробное бесплатное занятие!</button>
 		</div>
 	</section>
-
-
-	<section class="steps" id="vue-steps">
-		<h2>Как проходит обучение</h2>
+	
+	<h2 id="steps-scroll">Как проходит обучение</h2>
+	<section class="steps" id="steps">
 		<div class="steps-container">
 			<div class="item" v-for="item in storeSteps">
 				<div class="img" :style="{ backgroundImage: 'url('+item.img +')' }"></div>
@@ -94,18 +89,16 @@
 		</div>
 		<button class="btn-standart">Опробовать формат занятия</button>
 	</section>
-
-
-	<section class="map">
-		<h2>Как нас найти</h2>
+	
+	<h2 id="map-scroll">Как нас найти</h2>
+	<section class="map" id="map">
 		<div class="map-container">
 			<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad7e04349781f54c889a8a29951a35176ca626e2981c6aa73161244899f79f052&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
 		</div>
 	</section>
-
-
-	<section class="reviews" id="vue-reviews">
-		<h2>Отзывы</h2>
+	
+	<h2 id="reviews-scroll">Отзывы</h2>
+	<section class="reviews" id="reviews">
 		<div class="reviews-container">
         	<div class="item" v-for="item in storeReviews">
         		<div class="img" :style="{ backgroundImage: 'url('+item.img +')' }"></div>
@@ -118,12 +111,12 @@
 		</div>
 	</section>
 
-
 	<footer></footer>
 
 	<script src="libs/jquery.js"></script>
 	<script src="module/slick-slider/slick-slider.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/index.js"></script>
+	<script src="module/menu-scroll/menu-scroll.js"></script>
 </body>
 </html>

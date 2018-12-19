@@ -58,7 +58,7 @@
 .open.header-menu-touch > span:nth-child(2) {
   opacity: 0; }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 750px) {
   .header-menu-touch {
     display: flex; }
   .header-menu {
