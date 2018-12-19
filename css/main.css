@@ -14,7 +14,10 @@ footer {
       height: 45px;
       margin: 0px 10px;
       flex-shrink: 0;
-      opacity: 0.7; }
+      opacity: 0.7;
+      transition: 0.4s; }
+      footer .social a:hover {
+        opacity: 0.9; }
   footer p {
     margin: 10px; }
 
@@ -43,6 +46,17 @@ footer {
 @font-face {
   font-family: Arimo-Bold;
   src: url(../fonts/Arimo/Arimo-Bold.ttf); }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(32, 156, 137, 0.75);
+  border-radius: 2px; }
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1); }
 
 body {
   margin: 0;
@@ -80,11 +94,15 @@ a {
 
 .btn-standart {
   background: #209c89;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-family: inherit;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  font-family: inherit;
   transition: 0.4s; }
   .btn-standart:hover {
     opacity: 0.7; }

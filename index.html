@@ -15,7 +15,6 @@
 	<link rel="stylesheet" href="module/slick-slider/slick-slider.css">
 	<link rel="stylesheet" href="module/slick-slider/custom.css">
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.21/vue.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.0.1/vuex.min.js"></script>
@@ -57,11 +56,11 @@
 	<section class="courses" id="vue-courses">
 		<h2>Наши курсы</h2>
 		<div class="courses-container">
-			<div class="item" v-for="item in storeCourses">
+			<div class="item" v-for="(item, i) in storeCourses">
 				<div class="img" :style="{ backgroundImage: 'url('+item.img +')' }"></div>
 				<div class="text">{{item.text}}</div>
 				<div class="buttons">
-					<button class="btn-standart">Подробнее</button>
+					<a :href="'courses.html?id='+(i+1)" class="btn-standart">Подробнее</a>
 					<button class="btn-standart">Записаться на пробное бесплатное занятие</button>
 				</div>
 			</div>
@@ -105,7 +104,6 @@
 	</section>
 
 
-
 	<section class="reviews" id="vue-reviews">
 		<h2>Отзывы</h2>
 		<div class="reviews-container">
@@ -119,8 +117,6 @@
 			</div>
 		</div>
 	</section>
-
-
 
 
 	<footer></footer>

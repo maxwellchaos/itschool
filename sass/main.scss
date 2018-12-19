@@ -5,6 +5,10 @@
 @font-face { font-family: Arimo-Regular; src: url(../fonts/Arimo/Arimo-Regular.ttf); }
 @font-face { font-family: Arimo-Bold;    src: url(../fonts/Arimo/Arimo-Bold.ttf); }
 
+::-webkit-scrollbar       { width: 10px; height: 10px;}
+::-webkit-scrollbar-thumb { background-color: transparentize($color-accent, 0.25); border-radius: 2px;}
+::-webkit-scrollbar-track { background-color: rgba(0,0,0,0.1); }
+
 ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////
 
@@ -45,11 +49,15 @@ a {
 
 .btn-standart {
 	background: $color-accent;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: $fsize-btn;
+	font-family: inherit;
 	color: white;
 	border: none;
 	padding: 10px 20px;
 	cursor: pointer;
-	font-family: inherit;
 	transition: 0.4s;
 	&:hover {
 		opacity: 0.7;
