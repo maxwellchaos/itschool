@@ -116,3 +116,17 @@ $(window).on('resize', function() {
 	}
 });
 
+
+
+$(window).on('scroll', function() {
+	var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+	
+	var heightHeader = parseInt($('header').css('height'));
+
+	if (scrolled > heightHeader) {
+		$('.header-menu-container .btn-standart').css('opacity', '1');
+	} else {
+		$('.header-menu-container .btn-standart').css('opacity', '0');
+	}
+});
+

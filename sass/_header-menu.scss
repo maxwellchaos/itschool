@@ -21,6 +21,13 @@ $bg-menu-touch: grey;
 	background: $bg-header;
 	min-height: $h-header;
 	box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+	.btn-standart {
+		opacity: 0;
+		transition: 0.4s;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+	}
 }
 .header-menu {
 	margin-left: auto;
@@ -87,13 +94,20 @@ $bg-menu-touch: grey;
 ///////////////////////////////////////////////////////////////
 // adaptive
 ///////////////////////////////////////////////////////////////
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1084px) {
+	.header-menu ul {
+		justify-content: flex-start;
+	}
+}
+
+@media screen and (max-width: 870px) {
 	.header-menu-touch { 
 		display: flex; 
 	}
 	.header-menu { 
 		display: none; 
 		width: 100%;
+		padding-top: 50px;
 	}
 	.header-menu ul { 
 		flex-direction: column; 
@@ -101,6 +115,9 @@ $bg-menu-touch: grey;
 	}
 	.header-menu a     { 
 		transition-property: color; 
+	}
+	.header-menu-container .btn-standart {
+		left: 15px;
 	}
 }
 
