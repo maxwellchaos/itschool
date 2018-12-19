@@ -5,7 +5,6 @@
 ///////////////////////////////////////////////////////////////
 // header
 ///////////////////////////////////////////////////////////////
-
 header {
 	display: flex;
 	justify-content: space-between;
@@ -25,6 +24,42 @@ header {
 		flex-shrink: 0;
 		.tel {
 			margin-bottom: 7px;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	header {
+		width: 100%;
+		padding: 30px;
+	}
+}
+@media screen and (max-width: 745px) {
+	header {
+		padding: 0px 35px;
+		flex-wrap: wrap;
+		h1 {
+			width: 100%;
+			order: -1;
+			text-align: center;
+			margin: 20px 0px;
+		}
+	}
+}
+@media screen and (max-width: 470px) {
+	header {
+		justify-content: center;
+		h1 {
+			font-size: $fsize-h2;
+		}
+		img {
+			display: none;
+		}
+		.contact {
+			margin-bottom: 20px;
+			.tel {
+				text-align: center;
+			}
 		}
 	}
 }
@@ -64,6 +99,35 @@ header {
 	}
 }
 
+@media screen and (max-width: 1000px) {
+	section.courses {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 870px) {
+	.courses-container .item {
+		margin: 10px;
+		width: calc(50% - 20px);
+	}
+}
+@media screen and (max-width: 795px) {
+	.courses-container .item {
+		margin: 10px;
+		width: 90%;
+	}
+}
+@media screen and (max-width: 430px) {
+	.courses-container .item {
+		width: 100%;
+	}
+	.courses-container .buttons {
+		flex-wrap: wrap;
+		justify-content: center;
+		.btn-standart {
+			width: 100%;
+		}
+	}
+}
 
 ///////////////////////////////////////////////////////////////
 // teachers
@@ -80,6 +144,7 @@ header {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-start;
+		align-content: flex-start;
 		.name {
 			width: 100%;
 			margin-bottom: 20px;
@@ -106,6 +171,33 @@ header {
 	}
 }
 
+@media screen and (max-width: 1250px) {
+	section.teachers {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 1100px) {
+	section.teachers {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.teachers-container .item {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 525px) {
+	.teachers-container .item {
+		.img {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.text {
+			width: 100%;
+		}
+
+	}
+}
 
 ///////////////////////////////////////////////////////////////
 // steps
@@ -138,6 +230,21 @@ header {
 	display: block;
 }
 
+@media screen and (max-width: 970px) {
+	section.steps {
+		width: 90%;
+	}
+	.steps-container .item {
+		width: calc(50% - 10px);
+		margin: 5px;
+	}
+}
+@media screen and (max-width: 690px) {
+	.steps-container .item {
+		width: 90%;
+		margin: 5px;
+	}
+}
 
 ///////////////////////////////////////////////////////////////
 // map
@@ -145,7 +252,6 @@ header {
 .map-container {
 	height: 400px;
 }
-
 
 ///////////////////////////////////////////////////////////////
 // reviews
@@ -180,12 +286,21 @@ header {
 	}
 }
 
-
-///////////////////////////////////////////////////////////////
-// adaptive
-///////////////////////////////////////////////////////////////
-@media screen and (max-width: 1080px) {
-	
+@media screen and (max-width: 1230px) {
+	section.reviews {
+		width: 90%;
+	}
 }
-
+@media screen and (max-width: 710px) {
+	.reviews-container .item {
+		padding: 0;
+		.img {
+			display: none;
+		}
+		.wrapper {
+			width: 100%;
+			padding: 0;
+		}
+	}
+}
 

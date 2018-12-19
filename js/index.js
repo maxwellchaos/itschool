@@ -24,7 +24,7 @@ const store = new Vuex.Store({
 			{img:'_tmpimg/step.png', text:'1,5-2 часа'},
 			{img:'_tmpimg/step.png', text:'2 занятия в неделю'},
 			{img:'_tmpimg/step.png', text:'Только практика'},
-			{img:'_tmpimg/step.png', text:'- По будням вечером <br> - Весь день в выходные'},
+			{img:'_tmpimg/step.png', text:'- По будням вечером - Весь день в выходные'},
 			{img:'_tmpimg/step.png', text:'Видео и методичка по урокам для домашних работ'},
 			{img:'_tmpimg/step.png', text:'Дарим подарки, выдаем сертификаты'}
 		],
